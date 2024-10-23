@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+    max-width: 400px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: var(--form-bg);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    height: 20px;
+}
+
+.success-message {
+    color: green;
+    margin-top: 20px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.success-message.visible {
+    opacity: 1;
+}
+
+.char-counter {
+    font-size: 0.9em;
+    color: #555;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    background-color: transparent;
+    border: 1px solid #4CAF50;
+    color: #4CAF50;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+.theme-toggle:hover {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Dark Mode */
+:root {
+    --form-bg: #f9f9f9;
+    --text-color: black;
+    --bg-color: white;
+}
+
+body.dark {
+    background-color: #333;
+    color: white;
+}
+
+body.dark input,
+body.dark textarea {
+    background-color: #444;
+    color: white;
+}
+
+body.dark .theme-toggle {
+    background-color: #f9f9f9;
+    color: black;
+}
+
+body.dark .theme-toggle:hover {
+    background-color: #f9f9f9;
+    color: #4CAF50;
+}
